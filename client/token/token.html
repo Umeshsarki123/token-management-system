@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Live Token View</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<body>
+  <div id="tokenPage">
+    <div id="page">
+
+      <!-- Header -->
+      <header>
+        <h2>Live View</h2>
+        <button onclick="cancelBooking()">Cancel Booking</button>
+      </header>
+
+      <!-- Doctor Info -->
+      <div class="doctor-info">
+        <h3>Dr. DEMO</h3>
+        <p>MBBS, MD, DDM [UK], Physician & Diabetologist</p>
+        <p>Timing: 10:00 AM - 2:00 PM, 4:00 PM - 7:00 PM</p>
+      </div>
+
+      <!-- Token Section -->
+      <div class="token-section">
+
+        <div class="your-token-box">
+          <span class="label">Your Token</span>
+          <span class="token-number">18</span>
+        </div>
+
+        <div class="now-serving">
+          <span class="status">Ongoing</span><br>
+          TOKEN NO<br>
+          <strong>5</strong><br>
+          <small>11:39 AM</small>
+        </div>
+
+      </div>
+
+      <!-- Completed Tokens -->
+      <h4>Completed Tokens</h4>
+      <div class="token-list">
+        <div class="token-box">4<br><small class="token-time">11:39 AM</small></div>
+        <div class="token-box">3<br><small class="token-time">11:38 AM</small></div>
+        <div class="token-box">2<br><small class="token-time">11:36 AM</small></div>
+        <div class="token-box">1<br><small class="token-time">11:35 AM</small></div>
+      </div>
+
+      <!-- Waiting Tokens -->
+      <h4>Waiting Tokens</h4>
+      <div class="token-list">
+        <div class="token-box">6<br><small class="token-time">11:38 AM</small></div>
+        <div class="token-box">7<br><small class="token-time">11:40 AM</small></div>
+        <div class="token-box">8<br><small class="token-time">11:40 AM</small></div>
+        <div class="token-box">9<br><small class="token-time">11:43 AM</small></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function cancelBooking() {
+      alert("Booking cancelled successfully");
+    }
+  </script>
+</body>
+</html>
