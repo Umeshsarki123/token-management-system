@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Token System</title>
+  <link rel="stylesheet" href="../Css/index.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <!-- REGISTER PAGE -->
+  <section id="register" class="page active">
+    <div class="form-container">
+      <h2>Bank Token Form</h2>
+
+      <form id="registerForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone_number" placeholder="Phone Number" required />
+        <input type="text" name="account_number" placeholder="Account Number e.g ACC0001" required />     
+        <button type="submit">Get Token</button>
+      </form>
+
+      <a class="back-link" id="goToLogin">Already have a token?</a>
+    </div>
+  </section>
+
+  <!-- LOGIN PAGE -->
+  <section id="login" class="page">
+    <div class="form-container">
+      <h2>Token Details</h2>
+
+      <form id="loginForm">
+        <input type="text" name="account_number" placeholder="Account Number e.g ACC0001" required />
+       <input type="text" name="token_number" placeholder="Token Number e.g TKN-1" style="text-transform: uppercase;" required />
+        <button type="submit">Get Details</button>
+      </form>
+
+      <a class="back-link" id="goToRegister">Don’t have a token?</a>
+    </div>
+  </section>
+
+  <script>
+    // Page navigation
+    const registerPage = document.getElementById("register");
+    const loginPage = document.getElementById("login");
+
+    document.getElementById("goToLogin").addEventListener("click", () => {
+      registerPage.classList.remove("active");
+      loginPage.classList.add("active");
+    });
+
+    document.getElementById("goToRegister").addEventListener("click", () => {
+      loginPage.classList.remove("active");
+      registerPage.classList.add("active");
+    });
+  </script>
+
+  <script src="../Javascript/index.js"></script>
+</body>
+</html>

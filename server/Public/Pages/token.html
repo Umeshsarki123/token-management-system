@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Token Live View</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="../Css/token.css" />
+</head>
+<body>
+  <main id="page">
+    <div class="cards-container">
+
+      <!-- LIVE TOKEN CARD -->
+      <div class="card live-card">
+        <header class="card-header">
+          <h2>Live Token View</h2>
+          <button onclick="cancelBooking()">Cancel Booking</button>
+        </header>
+
+        <div class="branch-info">
+          <h3>XYZ Bank</h3>
+          <p>Address: 123 Maple Street, Downtown, Springfield</p>
+          <p>Timing: 10:00 AM – 2:00 PM | 4:00 PM – 7:00 PM</p>
+        </div>
+
+        <div class="token-section">
+          <div class="your-token-box">
+            <span>Ongoing Token:</span>
+            <span id="token_number" class="token-number">-</span>
+          </div>
+        </div>
+
+        <h4>Completed Tokens</h4>
+        <div id="completed" class="token-list">
+          <!-- Completed tokens rendered dynamically -->
+        </div>
+
+        <h4>Waiting Tokens</h4>
+        <div id="waiting" class="token-list">
+          <!-- Waiting tokens rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- USER DETAILS CARD -->
+      <div class="card user-card">
+        <h3>Your Token Details</h3>
+        <div><span>Name:</span> <strong id="name">-</strong></div>
+        <div><span>Phone:</span> <strong id="phone">-</strong></div>
+        <div><span>Account:</span> <strong id="account">-</strong></div>
+
+        <div><span>Token:</span> <strong class="highlight" id="token">-</strong></div>
+        <div><span>Status:</span> <strong class="status waiting" id="status">-</strong></div>
+        <div><span>Created At:</span> <strong id="created_at">-</strong></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../Javascript/token.js"></script>
+</body>
+</html>

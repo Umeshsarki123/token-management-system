@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f7fb;
+  color: #1f2937;
+  padding: 20px;
+}
+
+
+#page {
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  gap: 24px;
+  justify-content: center;
+}
+
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  flex: 1 1 400px;
+  max-width: 500px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0052cc;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.card-header h2 {
+  font-size: 20px;
+}
+
+.card-header button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.15s ease;
+}
+
+.card-header button:hover {
+  background-color: #b71c1c;
+}
+
+.card-header button:active {
+  transform: scale(0.95);
+}
+
+
+.branch-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.branch-info p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+
+.token-section {
+  display: flex;
+  justify-content: flex-start;
+  margin: 16px 0;
+}
+
+.your-token-box {
+  background-color: #eef4ff;
+  border-left: 6px solid #0052cc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+}
+
+.your-token-box .token-number {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0052cc;
+  margin-top: 4px;
+}
+
+
+.token-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  scroll-behavior: smooth;
+}
+
+
+.token-list {
+  overflow-x: auto;
+  scrollbar-width: none;      
+  -ms-overflow-style: none;   
+}
+
+.token-list::-webkit-scrollbar {
+  display: none;             
+}
+
+
+
+.tokens {
+  min-width: 50px;
+  padding: 8px 12px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tokens:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+.user-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.user-card div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.user-card div span {
+  color: #6b7280;
+}
+
+.user-card div strong {
+  font-weight: 500;
+}
+
+.user-card div strong.highlight {
+  color: #0052cc;
+}
+
+.user-card div strong.status.waiting {
+  color: #f59e0b;
+}
+
+.user-card div strong.status.ongoing {
+  color: #3b82f6;
+}
+
+.user-card div strong.status.completed {
+  color: #10b981;
+}
+
+.user-card div strong.status.cancelled {
+  color: #e63946;
+}
+
+
+.live-token-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 16px 0;
+}
+
+.live-token-btn {
+  min-width: 50px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.live-token-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.live-token-btn:active {
+  transform: scale(0.95);
+}
+
+.live-token-waiting {
+  background-color: #fbbf24;
+  color: #1f2937;
+}
+
+.live-token-ongoing {
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.live-token-completed {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  #page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

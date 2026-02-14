@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd, #f0f4f8);
+}
+
+/* Pages */
+.page {
+  display: none;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+/* Card */
+.form-container {
+  background: #ffffff;
+  width: 360px;
+  padding: 32px 36px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Title */
+.form-container h2 {
+  color: #0d47a1;
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+
+/* Inputs */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #0d47a1;
+}
+
+/* Button */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0d47a1;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.form-container button:hover {
+  background-color: #08306b;
+}
+
+/* Links */
+.back-link {
+  display: block;
+  margin-top: 18px;
+  color: #0d47a1;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
