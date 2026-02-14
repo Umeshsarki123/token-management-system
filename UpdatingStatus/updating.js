@@ -9,7 +9,7 @@ export const updateUsers = async () => {
   try {
     await client.query('BEGIN');
 
-    //  Finish existing ONGOING
+    
     const ongoing = await client.query(
       "SELECT id FROM tokens WHERE status = 'ONGOING' FOR UPDATE"
     );
@@ -24,7 +24,7 @@ export const updateUsers = async () => {
       return;
     }
 
-    //  Pick next WAITING
+    
     const waiting = await client.query(
       "SELECT id, token_number FROM tokens WHERE status = 'WAITING' ORDER BY id ASC LIMIT 1 FOR UPDATE"
     );
@@ -37,7 +37,7 @@ export const updateUsers = async () => {
 
     const token = waiting.rows[0];
 
-    //  Set ONGOING (DB guarantees uniqueness)
+   
     await client.query(
       "UPDATE tokens SET status = 'ONGOING' WHERE id = $1",
       [token.id]
@@ -47,7 +47,7 @@ export const updateUsers = async () => {
 
     console.log(` Token ${token.token_number} → ONGOING`);
 
-    //  Process token
+   
     await waitOneMinute();
 
     await pool.query(
